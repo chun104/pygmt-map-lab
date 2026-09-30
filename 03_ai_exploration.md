@@ -245,4 +245,27 @@ USGS 2000 年起 M ≥ 5.5 的地震依三段深度上色，白三角是全新�
 - [EarthScope EMC TX2019slab](https://data.earthscope.org/app/products/portal/emc_model_viewer.html?id=EMC-TX2019slab)：Lu, Grand, Lai & Garnero (2019), *JGR Solid Earth*, doi:10.1029/2019JB017448。
 - 交界帶分類：Lillie, R. J. (1999). *Whole Earth Geophysics*. Prentice Hall, ch. 2。板塊圖以 [USGS This Dynamic Planet (2006)](https://pubs.usgs.gov/imap/2800) 公有領域版本代替。
 - [PyGMT 0.17 安裝文件](https://www.pygmt.org/v0.17.0/install.html)
+- ### 秘魯–智利海溝 (Peru-Chile Trench) 地震與地形分析
+
+![地圖](andes_map.png)
+![剖面圖](andes_section.png)
+
+**地形與地震分布觀察**
+從地圖與 A–B 剖面中可以觀察到，地形在經度 -70° 左右發生劇烈變化：西側為深達數千公尺的狹長海溝，東側則迅速抬升為高聳的安地斯山脈。地震分布在空間上呈現極高的不對稱性：淺層地震（紅色，0–70 km）密集分布於海溝邊緣及沿岸地區；中層地震（橘黃色，70–300 km）向東移入大陸內部；深層地震（藍色，300–700 km）則出現在更東側的大陸深處。剖面圖清晰顯示，震源形成了一條向東傾斜的帶狀構造，一路延伸至地下近 600 公里深處。
+
+**交界帶類型與證據**
+這符合「聚合型交界帶（海洋–大陸板塊隱沒）」的特徵。圖上的主要證據包含：
+1. 地形特徵：深邃的海溝與平行於海溝的大陸高山帶（火山弧），這是高密度海洋板塊下沉並擠壓大陸板塊邊緣的典型地貌。
+2. 震源分布與傾角：剖面圖中震源深度隨著與海溝的距離向東遞增，勾勒出納斯卡板塊隱沒至南美洲板塊下方的軌跡。
+
+**不符合處、不確定性與缺乏資料**
+在剖面淺層的大陸地殼內部，有部分零星地震並未落在隱沒帶的主斷層面上。這可能是南美洲板塊內部受到擠壓而產生的地殼變形，單憑目前的點狀分布無法確認其具體的發震構造。此外，深達 300 公里以上的深源地震帶偶爾會出現地震數量明顯減少的空區，僅看此圖無法確定是板塊在該深度處於塑性變形，還是隱沒板塊發生了撕裂。
+若要完善佐證，目前還缺少：GPS 速度場向量資料（用來量化板塊移動速率）、震源機制解（用來驗證擠壓與應力狀態），以及地表火山分布資料。
+
+**資料註記**
+* 來源：USGS Earthquake Catalog API、GMT Earth Relief (02m 精度)
+* 時間範圍：2000-01-01 至今
+* 規模門檻：M >= 5.0
+* 走廊半寬：150 km
+* 預設深度比例：依據 USGS 處理流程，部分淺源層次缺乏深度解析度時會給予預設值（如 10 km 或 33 km），實際佔比依程式執行結果為準。
 - [原始課程參考 Notebook](https://github.com/oceanicdayi/plot_plate_boundary_pygmt/blob/main/pygmt_plot_plate_boundary.ipynb)
